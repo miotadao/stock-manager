@@ -1,23 +1,39 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import ShoppingList from './components/ShoppingList';
+import StockListRemake from './components/StockListRemake';
+import SwichButtons from './components/Swichbuttons';
 
 function App() {
+  const [things, setThings] = useState([]);
+  const [shoppingLists, setShoppingLists] = useState([]);
+  const [isStockShow, setIsStockShow] = useState(true);
+  const [isShoppingShow, setIsShoppingShow] = useState(false);
+
+
+
+
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container'>
+      <SwichButtons
+        isStockShow={isStockShow} setIsStockShow={setIsStockShow}
+        isShoppingShow={isShoppingShow} setIsShoppingShow={setIsShoppingShow}
+        things={things} setThings={setThings}
+        shoppingLists={shoppingLists} setShoppingLists={setShoppingLists}
+      />
+      <StockListRemake
+        things={things} setThings={setThings}
+        isStockShow={isStockShow} setIsStockShow={setIsStockShow}
+        shoppingLists={shoppingLists} setShoppingLists={setShoppingLists}
+      />
+      <ShoppingList
+        things={things} setThings={setThings}
+        isShoppingShow={isShoppingShow} setIsShoppingShow={setIsShoppingShow}
+        shoppingLists={shoppingLists} setShoppingLists={setShoppingLists}
+      />
     </div>
   );
 }

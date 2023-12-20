@@ -1,38 +1,137 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 600px;
+}
+
+.button-container {
+  display: flex;
+
+}
+
+.swich-button {
+  background-color: antiquewhite;
+  width: 80px;
+  height: 35px;
+  border: none;
+  border-radius: 7px 7px 0px 0px;
+}
+
+.hide-button {
+  color: #ccc !important;
+  background-color: white;
+}
+
+.stock {
+  background-color: antiquewhite;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  min-height: 200px;
+  border-radius: 0px 7px 7px 7px;
+  padding-bottom: 30px;
+}
+
+.shopping {
+  background-color: antiquewhite;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100px;
+  border-radius: 0px 7px 7px 7px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+h3 {
+  margin-top: 40px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.stock-form {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 40px;
+  display: flex;
+  gap: 15px;
+  padding-left: 20px;
+}
+
+.input-name {
+  width: 200px;
+  border-radius: 5px;
+  border: none;
+  padding-left: 10px;
+}
+
+.input-num {
+  width: 40px;
+  border-radius: 5px;
+  border: none;
+  padding-left: 15px;
+}
+
+.stock-ul {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 15px;
+}
+
+.shopping-ul {
+  display: flex;
+  margin-top: 30px;
+  flex-direction: column;
+  gap: 15px;
+}
+
+li {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
 }
 
-.App-link {
-  color: #61dafb;
+span {
+  font-size: 16px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+p {
+  font-size: 20px;
+  padding: 2px 10px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.minus {
+  background-color: white !important;
+
+}
+
+.shopping>div {
+  text-align: center;
+  margin: 0;
+}
+
+.shopping-delete-btn {
+  background-color: white !important;
+}
+
+
+
+.checked {
+  opacity: .6;
+  text-decoration: line-through;
+}
+
+.hide {
+  display: none;
 }
