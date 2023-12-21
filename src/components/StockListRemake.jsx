@@ -116,7 +116,7 @@ const StockListRemake = (props) => {
   }
 
 
-  const addShoppingList = (id, index) => {
+  const addShoppingList = (id) => {
 
     const date = new Date();
     const addDay = date.getDate();

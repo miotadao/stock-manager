@@ -36,8 +36,10 @@ const ShoppingList = (props) => {
   const handleDelete = () => {
     if (window.confirm('選択した項目はすべて削除します。よろしいですか？')) {
       props.setShoppingLists(props.shoppingLists.filter(shoppingList => { return shoppingList.isBought === false }));
-      props.setThings(props.shoppingLists.filter(shoppingList => { return shoppingList.isBought === false }));
+      props.setThings(props.things.filter(thing => { return thing.isBought === false }));
       alert('選択した項目を削除しました。');
+      console.log(props.shoppingLists);
+      console.log(props.things);
     }
 
   }
